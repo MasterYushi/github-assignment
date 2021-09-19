@@ -1,0 +1,37 @@
+<!-- FORM for username -->
+<div class="container mt-5">
+  <div class="row mt-2 mb-5">
+    <form class="form-inline col">
+      <input
+        type="text"
+        name="username"
+        id="username"
+        class="form-control mr-2"
+        placeholder="username"
+        #username
+      />
+      <button
+        class="btn btn-primary"
+        type="submit"
+        (click)="getUser(username.value); $event.preventDefault()"
+      >
+        Search!
+      </button>
+    </form>
+    <div class="col d-flex justify-content-end">
+      <h4>
+        Page:
+        <span class="badge badge-secondary">{{ activePage }}</span>
+      </h4>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <app-user-details [user]="user"></app-user-details>
+  <app-user-repos [repos]="repos"></app-user-repos>
+  <app-pagination
+    [numOfPages]="numOfPages"
+    (pageChange)="handlePageChange($event)"
+  ></app-pagination>
+</div>

@@ -1,0 +1,9 @@
+<div *ngIf="topics && topics.length > 0; else noTopics">
+  <span class="badge badge-primary mr-1 mb-1 p-2" *ngFor="let topic of topics">
+    {{ topic }}
+  </span>
+</div>
+
+<ng-template #noTopics>
+  <span class="badge badge-danger mr-1 mb-1 p-2"> No Topics </span>
+</ng-template>

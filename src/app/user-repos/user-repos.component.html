@@ -1,0 +1,27 @@
+<div class="row mt-5" *ngIf="repos && repos.length > 0; else noRepos">
+  <div class="col-sm-6" *ngFor="let repo of repos">
+    <div class="card bg-light mb-3">
+      <a [href]="repo.html_url"
+        ><h4 class="card-header">{{ repo.name }}</h4></a
+      >
+      <div class="card-body">
+        <p class="card-text">
+          {{ repo.description || "No description provided" }}
+        </p>
+        <app-topics [topics]="repo.topics"></app-topics>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ERROR TEMPLATE -->
+<ng-template #noRepos>
+  <div class="row mt-5">
+    <div class="col">
+      <div class="alert alert-info">
+        <h3 class="alert-heading">No repos to display</h3>
+        <hr />
+      </div>
+    </div>
+  </div>
+</ng-template>
