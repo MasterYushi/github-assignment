@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  gitApiKey: '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',
+  gitApiKey: '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',
 };

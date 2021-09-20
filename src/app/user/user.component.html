@@ -27,11 +27,41 @@
   </div>
 </div>
 
-<div class="container mt-5">
+<div
+  class="container mt-5"
+  *ngIf="contentLoaded || (requestMade && noContentFound); else showSkeleton"
+>
   <app-user-details [user]="user"></app-user-details>
   <app-user-repos [repos]="repos"></app-user-repos>
+
   <app-pagination
     [numOfPages]="numOfPages"
     (pageChange)="handlePageChange($event)"
   ></app-pagination>
 </div>
+
+<ng-template #showSkeleton>
+  <div *ngIf="requestMade && !noContentFound" class="container mt-5">
+    <app-profile-skeleton></app-profile-skeleton>
+    <div class="row mt-5">
+      <div class="col-sm-6">
+        <app-card-skeleton></app-card-skeleton>
+      </div>
+      <div class="col-sm-6">
+        <app-card-skeleton></app-card-skeleton>
+      </div>
+      <div class="col-sm-6">
+        <app-card-skeleton></app-card-skeleton>
+      </div>
+      <div class="col-sm-6">
+        <app-card-skeleton></app-card-skeleton>
+      </div>
+      <div class="col-sm-6">
+        <app-card-skeleton></app-card-skeleton>
+      </div>
+      <div class="col-sm-6">
+        <app-card-skeleton></app-card-skeleton>
+      </div>
+    </div>
+  </div>
+</ng-template>

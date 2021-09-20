@@ -1,0 +1,29 @@
+<div class="card bg-light mb-3">
+  <div class="card-header">
+    <ngx-skeleton-loader
+      [theme]="{
+        width: '40%',
+        'background-color': '#dedede',
+        'margin-bottom': 0
+      }"
+    ></ngx-skeleton-loader>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <ngx-skeleton-loader
+        [theme]="{ width: '80%', 'background-color': '#dedede' }"
+      ></ngx-skeleton-loader>
+      <ngx-skeleton-loader
+        [theme]="{ width: '70%', 'background-color': '#dedede' }"
+      ></ngx-skeleton-loader>
+    </p>
+    <ngx-skeleton-loader
+      count="5"
+      [theme]="{
+        width: '7%',
+        'margin-right': '5px',
+        'background-color': '#dedede'
+      }"
+    ></ngx-skeleton-loader>
+  </div>
+</div>

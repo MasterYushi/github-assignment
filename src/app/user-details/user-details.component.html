@@ -3,7 +3,7 @@
     <img [src]="user.avatar_url" alt="" class="rounded-circle" />
   </div>
   <div class="col-8 col-lg-9 d-flex flex-column justify-content-center">
-    <h2>{{ user.name }}</h2>
+    <h2>{{ user.name || "Name not provided" }}</h2>
     <p>{{ user.bio || "Bio not provided" }}</p>
     <p>{{ user.location || "Location not provided" }}</p>
     <a href="{{ user.html_url }}">{{ user.html_url }}</a>

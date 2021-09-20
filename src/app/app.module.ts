@@ -10,6 +10,8 @@ import { UserReposComponent } from './user-repos/user-repos.component';
 import { TopicsComponent } from './topics/topics.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { PaginationComponent } from './pagination/pagination.component';
+import { CardSkeletonComponent } from './card-skeleton/card-skeleton.component';
+import { ProfileSkeletonComponent } from './profile-skeleton/profile-skeleton.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { PaginationComponent } from './pagination/pagination.component';
     UserReposComponent,
     TopicsComponent,
     PaginationComponent,
+    CardSkeletonComponent,
+    ProfileSkeletonComponent,
   ],
   imports: [
     BrowserModule,
