@@ -1,10 +1,7 @@
 <nav aria-label="Page navigation example">
   <ul class="pagination pagination-lg justify-content-center">
-    <li
-      *ngFor="let cnt of countArray"
-      [ngClass]="activePage === cnt ? 'page-item active' : 'page-item'"
-    >
-      <a class="page-link" href="#" (click)="onPageChange($event)">
+    <li class="page-item" *ngFor="let cnt of countArray">
+      <a class="page-link" (click)="onPageChange($event)">
         {{ cnt }}
       </a>
     </li>

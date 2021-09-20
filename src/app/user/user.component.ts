@@ -20,6 +20,7 @@ export class UserComponent implements OnDestroy {
   constructor(private userService: UserService) {}
 
   getUser(username: string) {
+    this.activePage = 1;
     this.userObs = this.userService.getUser(username).subscribe(
       (user) => {
         this.user = user;

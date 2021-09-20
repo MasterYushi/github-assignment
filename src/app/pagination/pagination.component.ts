@@ -28,8 +28,9 @@ export class PaginationComponent implements OnChanges {
   }
 
   onPageChange(event: any): void {
-    this.activePage = event.srcElement.innerText;
-    // console.log(this.activePage);
+    this.activePage = event.target.innerText;
+    // event.target.parentElement.classList.toggle('active');
+
     this.pageChange.emit(this.activePage);
   }
 }
